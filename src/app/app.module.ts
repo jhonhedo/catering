@@ -5,19 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerRegisterComponent } from './customer-register/customer-register.component';
 import { LoginComponent } from './login/login.component';
-import { MenusComponent } from './menus/menus.component';
+import { FormsModule } from '@angular/forms';
+import { EventsComponent } from './events/events.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerRegisterComponent,
     LoginComponent,
-    MenusComponent,
+    EventsComponent
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+
   ],
   providers: [
     provideClientHydration()

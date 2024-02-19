@@ -6,9 +6,25 @@ import { Component } from '@angular/core';
   styleUrl: './customer-register.component.css'
 })
 export class CustomerRegisterComponent {
-name: string ;
-constructor() {
-  this.name = '';
-  
-}
+  id: number = 0;
+  customerName: string = '';
+  customerPassword: string = '';
+  customerEmail: string = '';
+  customerPhone: string = '';
+  customerAddress: string = '';
+  customerDietaryRestriction: string = '';
+  customerNote: string = '';
+  passwordError: string = '';
+
+  onSubmit() {
+    // Implement your submit logic here
+  }
+
+  cancel() {
+    // Implement your cancel logic here
+  }
+
+  checkPassword() {
+    // Implement your password validation logic here
+  }
 }

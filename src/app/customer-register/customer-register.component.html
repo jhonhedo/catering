@@ -1,51 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration</title>
-  
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
-    .registration-container {
-      margin-top: 50px;
-    }
-  </style>
-</head>
-<body>
+<div>
+  <form (ngSubmit)="onSubmit()" class="container mt-5">
+      <h1 class="text-center">Customer Registration</h1>
+      <div class="row">
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <label for="customerName">Customer Name</label>
+                  <input type="text" class="form-control" id="customerName" [(ngModel)]="customerName" name="customerName">
+              </div>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card registration-container">
-        <div class="card-body">
-          <h5 class="card-title text-center">Registration</h5>
-          <form>
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your full name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Enter a password">
-            </div>
-            <div class="form-group">
-              <label for="confirm-password">Confirm Password</label>
-              <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-          </form>
-        </div>
+              <div class="mb-3">
+                  <label for="customerEmail">Email Id</label>
+                  <input type="text" class="form-control" id="customerEmail" [(ngModel)]="customerEmail" name="customerEmail">
+              </div>
+
+              <div class="mb-3">
+                  <label for="customerPhone">Phone No</label>
+                  <input type="text" class="form-control" id="customerPhone" [(ngModel)]="customerPhone" name="customerPhone">
+              </div>
+
+              <div class="mb-3">
+                  <label for="customerPassword">Password</label>
+                  <input type="password" class="form-control" id="customerPassword" [(ngModel)]="customerPassword" name="customerPassword">
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <label for="customerAddress">Address</label>
+                  <input type="text" class="form-control" id="customerAddress" [(ngModel)]="customerAddress" name="customerAddress">
+              </div>
+
+              <div class="mb-3">
+                  <label for="customerDietaryRestriction">Dietary Restriction</label>
+                  <input type="text" class="form-control" id="customerDietaryRestriction" [(ngModel)]="customerDietaryRestriction" name="customerDietaryRestriction">
+              </div>
+
+              <div class="mb-3">
+                  <label for="customerNote">Note</label>
+                  <textarea class="form-control" id="customerNote" [(ngModel)]="customerNote" name="customerNote" rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Sign up</button>
+              <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+          </div>
       </div>
-    </div>
-  </div>
+  </form>
 </div>
-
-</body>
-</html>
