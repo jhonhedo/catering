@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { CustomerRegisterComponent } from './customer-register/customer-register.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-import { EventsComponent } from './events/events.component';
+import { EventdataComponent } from './eventdata/eventdata.component';
+
 
 
 
@@ -16,13 +17,13 @@ import { EventsComponent } from './events/events.component';
     AppComponent,
     CustomerRegisterComponent,
     LoginComponent,
-    EventsComponent
+    EventdataComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule
 
   ],
   providers: [
@@ -31,3 +32,4 @@ import { EventsComponent } from './events/events.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

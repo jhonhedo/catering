@@ -1,0 +1,42 @@
+<div>
+    <form (ngSubmit)="onSubmit()" class="container mt-5">
+        <h1 class="text-center">Event Registration</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="eventDate">Event Date</label>
+                    <input type="date" class="form-control" id="eventDate" [(ngModel)]="eventDate" name="eventDate">
+                </div>
+
+                <div class="mb-3">
+                    <label for="eventTime">Event Time</label>
+                    <input type="time" class="form-control" id="eventTime" [(ngModel)]="eventTime" name="eventTime">
+                </div>
+
+                <div class="mb-3">
+                    <label for="eventLocation">Event Location</label>
+                    <input type="text" class="form-control" id="eventLocation" [(ngModel)]="eventLocation" name="eventLocation">
+                </div>
+
+                <div class="mb-3">
+                    <label for="occasion">Occasion</label>
+                    <input type="text" class="form-control" id="occasion" [(ngModel)]="occasion" name="occasion">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="numberOfGuests">Number of Guests</label>
+                    <input type="number" class="form-control" id="numberOfGuests" [(ngModel)]="numberOfGuests" name="numberOfGuests">
+                </div>
+
+                <div class="mb-3">
+                    <label for="specialRequests">Special Requests</label>
+                    <textarea class="form-control" id="specialRequests" [(ngModel)]="specialRequests" name="specialRequests" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register Event</button>
+                <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
