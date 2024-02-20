@@ -7,6 +7,9 @@ import { CustomerRegisterComponent } from './customer-register/customer-register
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { EventdataComponent } from './eventdata/eventdata.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { MenusComponent } from './menus/menus.component';
 
 
 
@@ -17,13 +20,16 @@ import { EventdataComponent } from './eventdata/eventdata.component';
     AppComponent,
     CustomerRegisterComponent,
     LoginComponent,
-    EventdataComponent
+    EventdataComponent,
+    MenusComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule
 
   ],
   providers: [
